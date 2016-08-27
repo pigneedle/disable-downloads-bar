@@ -1,5 +1,5 @@
 'use strict';
 
-chrome.runtime.onStartup.addListener(() => {
-  chrome.downloads.setShelfEnabled(false);
-});
+let disableShelf = () => chrome.downloads.setShelfEnabled(false);
+chrome.runtime.onInstalled.addListener(disableShelf);
+chrome.runtime.onStartup.addListener(disableShelf);
