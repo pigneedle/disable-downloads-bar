@@ -1,24 +1,11 @@
 {
-  "name": "Add shortcuts to move tabs to left or right",
-  "version": "1.0",
-  "description": "Can be configured in chrome://extensions/configureCommands",
+  "name": "Disable Download Bar",
+  "version": "1.5",
+  "description": "Removes the download bar at the bottom of Chrome windows (does nothing else).",
+  "permissions": [
+    "downloads", "downloads.shelf"
+  ],
   "manifest_version": 2,
-  "background": {
-    "page": "background.html"
-  },
-  "offline_enabled": true,
-  "commands": {
-    "move_left": {
-      "suggested_key": {
-        "default": "Ctrl+O"
-      },
-      "description": "Move left"
-    },
-    "move_right": {
-      "suggested_key": {
-        "default": "Ctrl+P"
-      },
-      "description": "Move right"
-    }
-  }
+  "background": { "persistent": false, "scripts": ["background.js"] },
+  "offline_enabled": true
 }
