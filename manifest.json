@@ -1,6 +1,6 @@
 {
   "name": "Disable Download Bar",
-  "version": "1.5",
+  "version": "1.51",
   "description": "Removes the download bar at the bottom of Chrome windows (does nothing else).",
   "permissions": [
     "downloads", "downloads.shelf"
